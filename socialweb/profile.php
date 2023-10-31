@@ -2,7 +2,7 @@
 session_start();
 include 'database.php';
 
-$id = $_GET['id'];
+$id = $_SESSION['id'];
 
 $query = "SELECT * FROM coderu WHERE id='$id'";
 $result = mysqli_query($link, $query) or die(mysqli_error($link));

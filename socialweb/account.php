@@ -30,6 +30,7 @@ if (!empty($_POST['submit'])) {
 	    <input name="surname" value="<?= $user['surname'] ?>">
 	    <input type="submit" name="submit">
     </form>
+	<a href="profile.php">Вернуться в профиль</a>
 
 </body>
 </html>

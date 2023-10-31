@@ -12,10 +12,9 @@
 <?php 
 session_start();
 $id = $_SESSION['id'];
-var_dump($_SESSION);
 echo '<ul>';
 if (!empty($_SESSION['auth'])){?>
-    <li><a href='profile.php?id=<?=  $_SESSION['id'] ?> '><?= $_SESSION['login']?></a></li>
+    <li><a href='profile.php '><?= $_SESSION['login']?></a></li>
     <li><a href="users.php">Пользователи сайта</a></li>
     <li><a href='logout.php'>выйти</a></li>
 <?php }else {
