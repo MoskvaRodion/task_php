@@ -3,16 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Смена пароля</title>
 </head>
 <body>
 <form action="" method="POST">
-        <input type="password" name='old_pass'>
-        <input type="password" name='new pass'>
-        <input type="password" name="new_pass_confirm">
+    <legend>Смена пароля</legend>
+        <label class='forlabel' for="old_pass">Старый пароль
+             <input type="password" name='old_pass'>
+            </label>
+       
+        <label class='forlabel' for="new_pass">Новый пароль
+            <input type="password" name='new_pass'>
+        </label>
+
+        <label class='forlabel' for="new_pass_confirm">Подтвердите пароль
+            <input type="password" name="new_pass_confirm">
+        </label>
+
         <button type="submit">Изменить</button>
+        <a href="profile.php">Вернуться в профиль</a>
     </form>
-    <a href="profile.php">Вернуться в профиль</a>
+    
 <?php
 session_start();
 include 'database.php';

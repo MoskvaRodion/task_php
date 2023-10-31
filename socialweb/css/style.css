@@ -4,25 +4,25 @@
     --ahover-: blue;
 }
 
-* {
-    
+body{
     margin: 20 auto;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
+    font-size: 18px;
+    box-sizing: border-box;
 }
 legend{
     font-weight: bold;
     margin-bottom: 20px;
 }
 form {
-    padding: 10px 0;
-    margin: 15% auto;
-    width: 500px;
+    padding: 20px 0;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
     border-radius: 20px;
     background-color:var(--bg-);
-    align-items: center;
-    
+    margin: 10% auto;
 }
 
 .cols {
@@ -40,20 +40,42 @@ form {
 
 input{
     margin-bottom: 20px;
+    width: 100%;
+    max-width: 210px;
+    margin-top: 5px;
+    margin-right: 10px;
 }
 button{
     display: block;
     margin: 0 auto;
     margin-bottom: 20px;
+    padding: 7px 10px;
+    background: #b4b4be;
+    color: black;
+    border-radius: 7px;
 } 
 a {
     text-decoration: none;
     color: var(--a-); 
-    width: 300px;
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    display: inline-block;
+    text-align: center;
+    padding: 5px 10px;
 }
 a:hover {
     color: var(--ahover-);
     background-color: aliceblue;
     border-radius: 20px;
-    padding: 4px;
+    box-sizing: content-box;
+    display: inline-block;
 }
+
+label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+

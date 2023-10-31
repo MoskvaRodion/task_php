@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
     <?php session_start()?>
-    <title>Профиль <?= $_SESSION['login']?></title>
+    <title>Редактирование данных <?= $_SESSION['login']?></title>
 </head>
 <body>
 <?php 
@@ -26,11 +27,13 @@ if (!empty($_POST['submit'])) {
 }
 ?>
 	<form action="" method="POST">
-	    <input name="name" value="<?= $user['name'] ?>">
-	    <input name="surname" value="<?= $user['surname'] ?>">
-	    <input type="submit" name="submit">
+		<legend>Изменить данные профиля</legend>
+		<label for="name">Имя<input name="name" value="<?= $user['name'] ?>"></label>
+		<label for="surname">Фамилия<input name="surname" value="<?= $user['surname'] ?>"></label>
+	    <button type="submit" name="submit">Изменить</button>
+		<a href="profile.php">Вернуться в профиль</a>
     </form>
-	<a href="profile.php">Вернуться в профиль</a>
+	
 
 </body>
 </html>

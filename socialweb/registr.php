@@ -66,31 +66,31 @@
     <div class='cols'>
         <div class='text-cols'>
             <span><?= isset($errorlogin) ? $errorlogin : ''?></span>
-            <label class='forlabel' for="login">Придумайте логин</label>
+            <label for="login">Придумайте логин</label>
         	<input name="login">
 
             <span><?php echo isset($errorpass) ? $errorpass : '';?></span>
-            <label class='forlabel' for="password">Придумайте пароль</label>
+            <label for="password">Придумайте пароль</label>
             <input name="password" type=password>
 
-            <label class='forlabel' for="confirm">Подтвердите пароль</label>
+            <label for="confirm">Подтвердите пароль</label>
             <input type="password" name="confirm">
 
-            <label class='forlabel' for="email">Введите вашу почту</label>
+            <label for="email">Введите вашу почту</label>
             <input name="email" type="email">
         </div>
         <div class='text-cols'>
-        <label class='forlabel' for="name">Ваше имя</label>
+        <label for="name">Ваше имя</label>
         	<input name="name">
 
-            <label class='forlabel' for="surname">Ваша фамилия</label>
+            <label for="surname">Ваша фамилия</label>
         	<input name="surname">
 
-            <label class='forlabel' for="date_of_birth">Дата рождения</label>
+            <label for="date_of_birth">Дата рождения</label>
             <input name="date_of_birth" type="date">
             
             
-            <span class='forlabel'><?= isset($error_of_date) ? $error_of_date : ''?></span>
+            <span><?= isset($error_of_date) ? $error_of_date : ''?></span>
 
         </div>
     </div>
