@@ -32,6 +32,7 @@ echo "<h1>{$user['name']}</h1>";
     <ul class='profile'>
         <li><a href="account.php">Изменение данных</a></li>
         <li><a href="changepass.php">Смена пароля</a></li>
+        <li><a href="deleteacc.php">Удалить аккаунт</a></li>
         <li><a href="action.php">Вернуться к тексту</a></li>
         <li><a href="logout.php">Выход</a></li>
     </ul>
