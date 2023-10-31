@@ -1,0 +1,59 @@
+:root{
+    --bg-:#afcde7;
+    --a-: black;
+    --ahover-: blue;
+}
+
+* {
+    
+    margin: 20 auto;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+legend{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+form {
+    padding: 10px 0;
+    margin: 15% auto;
+    width: 500px;
+    border-radius: 20px;
+    background-color:var(--bg-);
+    align-items: center;
+    
+}
+
+.cols {
+	white-space: nowrap;
+}
+.text-cols {
+	white-space: normal;	
+	display: inline-block;
+	width: 48%;
+	vertical-align: top;
+}
+.cols .text-cols:first-child {
+	margin-right: 4%;
+}
+
+input{
+    margin-bottom: 20px;
+}
+button{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+} 
+a {
+    text-decoration: none;
+    color: var(--a-); 
+    width: 300px;
+}
+a:hover {
+    color: var(--ahover-);
+    background-color: aliceblue;
+    border-radius: 20px;
+    padding: 4px;
+}
