@@ -35,6 +35,7 @@ if(empty($_POST)) {?>
 		$query = "SELECT * FROM coderu WHERE login='$login'";
 		$res = mysqli_query($link, $query);
 		$user = mysqli_fetch_assoc($res);
+		$status = $user['status'];
 		
 		if (!empty($user)) {
 			$hash = $user['password'];
@@ -44,6 +45,7 @@ if(empty($_POST)) {?>
 					'auth' => true,
 					'id' => $user['id'],
 					'login' => $login,
+					'status' => $status,
 				);
 				header('Location:action.php');
 			} else {

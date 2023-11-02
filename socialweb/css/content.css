@@ -23,6 +23,11 @@ ul{
     padding: 0;
     margin-top: 20px;
 }
+.header-text > li {
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 3px;
+}
 
 .profile {
     display: flex;

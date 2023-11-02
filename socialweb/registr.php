@@ -41,6 +41,7 @@
 					'auth' => true,
 					'id' => mysqli_insert_id($link),
 					'login' => $login,
+                    'status' => 'user',
 				);
                 header('Location: action.php');
                 }else{

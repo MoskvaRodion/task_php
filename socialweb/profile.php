@@ -23,10 +23,11 @@ $dr = strtotime($user['date_of_birth']);
 $now = strtotime(date('Y-m-d'));
 
 $age = intval(($now - $dr) / 60 /60 / 24 / 30 / 12);
-echo "<h1>{$user['name']}</h1>";
+echo "<h1>{$user['name']} {$user['surname']}</h1>";
 ?>
 	<p>
-		Возраст: <span class="age"><?= $age ?></span>
+		Возраст: <span class="age"><?= $age ?></span><br>
+        Роль: <span><?= $_SESSION['status'] == 'user' ? 'пользователь': 'админ' ?></span>
 	</p>
 
     <ul class='profile'>

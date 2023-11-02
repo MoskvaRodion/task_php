@@ -22,7 +22,7 @@ $dr = strtotime($user['date_of_birth']);
 $now = strtotime(date('Y-m-d'));
 
 $age = intval(($now - $dr) / 60 /60 / 24 / 30 / 12);
-?>
+?><header><?php include 'header.php'?></header>
 	<h1> <?= $user['name']." " . $user['surname']?></h1>
 	<p>
 		Возраст: <span class="age"><?= $age ?></span>

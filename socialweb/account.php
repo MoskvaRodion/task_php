@@ -26,6 +26,7 @@ if (!empty($_POST['submit'])) {
 	mysqli_query($link, $query);
 }
 ?>
+	<header><?php include 'header.php'?></header>
 	<form action="" method="POST">
 		<legend>Изменить данные профиля</legend>
 		<label for="name">Имя<input name="name" value="<?= $user['name'] ?>"></label>

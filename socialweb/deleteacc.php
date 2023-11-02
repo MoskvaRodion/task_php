@@ -32,8 +32,9 @@
 	}// Проверяем соответствие хеша из базы введенному старому паролю
 
     ?>
+	<header><?php include 'header.php'?></header>
 	<form action="" method="POST">
-		<legend>Удаление профиля <?= $user['login']?></legend>
+		<legend>Удаление профиля</legend>
 		<label for="pass">Введите пароль<input type="password" name="pass"></label>
 		<button type="submit">Удалить</button>
 	</form>

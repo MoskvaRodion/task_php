@@ -12,9 +12,10 @@
 <?php 
 session_start();
 $id = $_SESSION['id'];
-echo '<ul>';
+echo "<ul class='header-text'>";
 if (!empty($_SESSION['auth'])){?>
-    <li><a href='profile.php '><?= $_SESSION['login']?></a></li>
+    
+    <header><?php include 'header.php'?></header>
     <li><a href="users.php">Пользователи сайта</a></li>
     <li><a href='logout.php'>выйти</a></li>
 <?php }else {

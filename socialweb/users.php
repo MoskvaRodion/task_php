@@ -15,6 +15,7 @@
     $query = "SELECT * FROM coderu";
     $result = mysqli_query($link, $query) or die(mysqli_error($link));
     ?>
+    <header><?php include 'header.php'?></header>
     <h1>Пользователи сайтом</h1>
     <ol>
         

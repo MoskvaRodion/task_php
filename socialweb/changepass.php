@@ -7,6 +7,7 @@
     <title>Смена пароля</title>
 </head>
 <body>
+<header><?php include 'header.php'?></header>
 <form action="" method="POST">
     <legend>Смена пароля</legend>
         <label class='forlabel' for="old_pass">Старый пароль
