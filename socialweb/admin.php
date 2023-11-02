@@ -17,8 +17,9 @@
     <?php 
     include 'database.php';
     session_start();
-    
-    $query = 'SELECT * FROM coderu';
+    $query = "SELECT coderu.*, statuses.name as status FROM coderu
+		LEFT JOIN statuses
+		ON coderu.status_id=statuses.id";
     $result = mysqli_query($link, $query) or die(mysqli_error($link));
 
     foreach ($result as $user) {?>
@@ -33,8 +34,8 @@
    
     if (@$_GET['fun'] == 'update'){
         $id = $_GET['id'];
-        $stat = ($_GET['status'] == 'admin') ? 'user' : 'admin' ;
-        $update = "UPDATE coderu SET status='$stat' WHERE id='$id'";
+        $stat = ($_GET['status'] == 'admin') ? '1' : '2' ;
+        $update = "UPDATE coderu SET status_id='$stat' WHERE id='$id'";
 	    mysqli_query($link, $update);
         header('location: admin.php');
     };
@@ -43,6 +44,7 @@
         $delete = "DELETE FROM coderu WHERE id='$id'";
 	    mysqli_query($link, $delete);
         header('location: admin.php');
+
     }
     ?>
 

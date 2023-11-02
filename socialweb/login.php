@@ -32,20 +32,23 @@ if(empty($_POST)) {?>
 }else {
     if (!empty($_POST)) {
 		$login = $_POST['login'];
-		$query = "SELECT * FROM coderu WHERE login='$login'";
+		$query = "SELECT coderu.*, statuses.name as status FROM coderu
+		LEFT JOIN statuses
+		ON coderu.status_id=statuses.id WHERE login='$login'";
+
 		$res = mysqli_query($link, $query);
 		$user = mysqli_fetch_assoc($res);
-		$status = $user['status'];
 		
 		if (!empty($user)) {
 			$hash = $user['password'];
 			if (password_verify($_POST['password'], $hash)) {
 				session_start();
+				
 				$_SESSION = array(
 					'auth' => true,
 					'id' => $user['id'],
 					'login' => $login,
-					'status' => $status,
+					'status' =>  $user['status'],
 				);
 				header('Location:action.php');
 			} else {
